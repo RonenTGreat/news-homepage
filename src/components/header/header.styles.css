@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Inter";   /*Can be any text*/
+  src: local("Inter"),
+    url('../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Inter";
+  margin: 2rem 2rem;
+}
+
+.nav_list{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 2rem;
+  list-style-type: none;
+}
+
+.nav_item{
+  margin: 0 1rem;
+}
+
+.nav_link{
+  color: hsl(236, 13%, 42%);
+}
+
+.nav_link:hover{
+  color: hsl(5, 85%, 63%);
+}
