@@ -1,0 +1,15 @@
+.new-item__section{
+  margin: 2rem;
+}
+
+.new-item__header{
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: hsl(36, 100%, 99%);
+}
+
+.new-item__paragraph{
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: hsl(233, 8%, 79%);
+}
