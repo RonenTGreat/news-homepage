@@ -10,26 +10,26 @@ const Container = () => {
     <main className="container">
       <div className="main-section">
         <picture>
-          <source media="(max-width:425px)" srcset={mobileImg} />
+          <source media="(max-width:425px)" srcSet={mobileImg} />
           <img style={{ width: "100%" }} src={desktopImg} className="body-img" alt="web3 iamge" />
         </picture>
 
-        <div>
-          <h1 className="heading">The Bright Future of Web 3.0?</h1>
+        <div className="content">
+          <h1 className="content__heading">The Bright Future of Web 3.0?</h1>
 
           <div>
-            <p>
+            <p className="content__paragraph">
               We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
               But is it really fulfilling its promise?
             </p>
 
-            <button className="btn">Read more</button>
+            <button className="content__btn">Read more</button>
           </div>
         </div>
       </div>
 
       <div className="new-section">
-        <h2 className="new-sectin__heading">New</h2>
+        <h2 className="new-section__heading">New</h2>
 
         <NewItem new_item_header="Hydrogen VS Electric Cars" new_item_paragraph="Will hydrogen-fueled cars ever catch up to EVs?" />
         <hr />

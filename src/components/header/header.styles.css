@@ -6,12 +6,17 @@
   font-style: normal;
 }
 
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: "Inter";
-  margin: 2rem 2rem;
+  margin: 2rem 3rem 2rem 1rem;
+}
+
+.logo {
+  margin: 0 4rem;
 }
 
 .nav_list{
