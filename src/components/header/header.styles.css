@@ -1,13 +1,14 @@
 @font-face {
-  font-family: "Inter";   /*Can be any text*/
+  font-family: "Inter"; /*Can be any text*/
   src: local("Inter"),
-    url('../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format("truetype");
+    url("../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+      format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
-
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +20,7 @@
   margin: 0 4rem;
 }
 
-.nav_list{
+.nav_list {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -27,14 +28,70 @@
   list-style-type: none;
 }
 
-.nav_item{
+.nav_item {
   margin: 0 1rem;
 }
 
-.nav_link{
+.nav_link {
   color: hsl(236, 13%, 42%);
 }
 
-.nav_link:hover{
+.nav_link:hover {
   color: hsl(5, 85%, 63%);
+}
+
+.btn_nav {
+  display: none;
+}
+
+.closebtn{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav_css {
+    display: none;
+  }
+
+  .btn_nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    border-left: 1px hsl(236, 13%, 42%) solid;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: hsl(36, 100%, 99%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    margin: 2rem 5rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: hsl(236, 13%, 42%);
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav .closebtn {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background-color: hsl(36, 100%, 99%);
+}
 }
