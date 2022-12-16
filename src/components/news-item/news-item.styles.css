@@ -5,7 +5,7 @@
 }
 
 .news__img{
-  width: 30%;
+  width: 40%;
 }
 
 .news__number-heading{
@@ -29,4 +29,16 @@
   max-width: 15rem;
   line-height: 1.5;
   color: hsl(236, 13%, 42%);
+}
+
+@media (max-width: 768px) {
+  .news__img{
+    width: 20%;
+  }
+}
+
+@media (max-width: 425px) {
+  .news__img{
+    width: 30%;
+  }
 }
