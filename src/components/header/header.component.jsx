@@ -11,13 +11,21 @@ import logo from "../../assets/images/logo.svg"
 const Header = () => {
 
   function openNav() {
-    document.querySelector(".sidenav").style.width = "400px";
-    document.querySelector(".btn_nav").style.display = "none";
+    document.querySelector(".sidenav").style.width = "70%";
+
+    // Causes page not to scroll when nav is opened
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
   }
 
   function closeNav() {
     document.querySelector(".sidenav").style.width = "0";
-    document.querySelector(".btn_nav").style.display = "block";
+    document.body.style.position = '';
+    document.body.style.top = '';
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 
   return (
@@ -47,11 +55,13 @@ const Header = () => {
         <button className="closebtn" onClick={closeNav}>
           <img src={iconMenuClose} alt="" />
         </button>
-        <a href="0">Home</a>
-        <a href="0">New</a>
-        <a href="0">Popular</a>
-        <a href="0">Trending</a>
-        <a href="0">Categories</a>
+        <div>
+          <a href="0">Home</a>
+          <a href="0">New</a>
+          <a href="0">Popular</a>
+          <a href="0">Trending</a>
+          <a href="0">Categories</a>
+        </div>
       </div>
     </header>
   );
