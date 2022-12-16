@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Inter";   /*Can be any text*/
+  font-family: "Inter"; /*Can be any text*/
   src: local("Inter"),
-    url('../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format("truetype");
+    url("../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+      format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 main {
   margin: 0 6rem 0 5rem;
-
 }
 
 .container {
@@ -18,7 +18,7 @@ main {
   grid-column-gap: 1.5rem;
 }
 
-.content {
+.main-section {
   grid-area: 1 / 1 / 2 / 2;
 }
 .new-section {
@@ -36,7 +36,6 @@ main {
   margin: 1rem 0;
 }
 
-
 hr {
   border: none;
   height: 1px;
@@ -45,26 +44,26 @@ hr {
   background-color: hsl(233, 8%, 79%);
 }
 
-.content{
+.content {
   display: flex;
   column-gap: 14rem;
   margin: 1.5rem 0;
 }
 
-.content__heading{
+.content__heading {
   font-family: "Inter";
   max-width: 15rem;
   font-size: 2.5rem;
   color: hsl(240, 100%, 5%);
 }
 
-.content__paragraph{
+.content__paragraph {
   color: hsl(236, 13%, 42%);
   max-width: 28rem;
   margin-bottom: 1.5rem;
 }
 
-.content__btn{
+.content__btn {
   text-transform: uppercase;
   padding: 1rem;
   border: none;
@@ -75,11 +74,33 @@ hr {
   cursor: pointer;
 }
 
-.content__btn:hover{
+.content__btn:hover {
   background-color: hsl(240, 100%, 5%);
 }
 
-.news__section{
+.news__section {
   display: flex;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  main{
+    margin: 1rem;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content__heading{
+    max-width: 20rem;
+  }
+  .news__section {
+    flex-direction: column;
+  }
 }
